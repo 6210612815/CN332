@@ -1,4 +1,4 @@
-# CN332
+# CN332 Project
 1. 6210612609 นภทีป์ ละปะชัย
 2. 6210612690 จิรพนธ์ กันภัย
 3. 6210612740 ปารินทร์ โสภิตลาภธนา 
@@ -10,3 +10,5 @@
 9. 6210612773 ปฐากร สุขแสง
 
 # [Pivotal](https://www.pivotaltracker.com/n/projects/2557028)
+
+![This is an image](https://imgur.com/a/KUHPwC5)

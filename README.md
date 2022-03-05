@@ -11,4 +11,4 @@
 
 # [Pivotal](https://www.pivotaltracker.com/n/projects/2557028)
 
-![This is an image](https://imgur.com/a/KUHPwC5)
+![This is an image](https://i.imgur.com/O452Dft.jpg)

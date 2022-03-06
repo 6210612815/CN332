@@ -3,18 +3,18 @@
 # Core Features
 # Account
   •	Log in/out\
-  •	Edit Profile\
+  •	Edit Profile
 # Students
   •	Add Idea of the Project\
   •	Do Project\
   •	Update Project\
   •	View All Project\
-  •	Search Other Project\
+  •	Search Other Project
 # Teachers
   •	Approve Project\
   •	Reject Project\
   •	Comment/Rating Project\
-  •	Approve Complete Project\
+  •	Approve Complete Project
 
 # Screen Design#1
 ![This is an image](https://i.imgur.com/O452Dft.jpg)
@@ -36,4 +36,4 @@
 7. 6210612815 สิทธิโชค งามพิพัฒน์โชคชัย
 8. 6210612682 ปัณณวิชญ์ สังวร
 9. 6210612773 ปฐากร สุขแสง
-# [Pivotal](https://www.pivotaltracker.com/n/projects/2557028)
+[Pivotal](https://www.pivotaltracker.com/n/projects/2557028)

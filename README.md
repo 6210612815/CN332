@@ -25,7 +25,20 @@
 
 
 # Database Design#1
-![This is an image](https://i.imgur.com/XPr2YMc.jpg)
+![This is an image](https://i.imgur.com/LPDwrD2.jpg)
+
+# Sequence Diagram
+![This is an image](https://i.imgur.com/lXP1qYQ.png)
+
+# Use Case
+![This is an image](https://i.imgur.com/7mMh1Yy.png)
+
+# Class Diagram
+![This is an image](https://i.imgur.com/8H76lUe.png)
+
+# Logical Flow
+![This is an image](https://i.imgur.com/FyUxoRu.png)
+
 
 1. 6210612609 นภทีป์ ละปะชัย
 2. 6210612690 จิรพนธ์ กันภัย

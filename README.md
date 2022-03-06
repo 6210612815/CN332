@@ -39,7 +39,7 @@
 # Logical Flow
 ![This is an image](https://i.imgur.com/FyUxoRu.png)
 
-
+#MEMBERS
 1. 6210612609 นภทีป์ ละปะชัย
 2. 6210612690 จิรพนธ์ กันภัย
 3. 6210612740 ปารินทร์ โสภิตลาภธนา 
@@ -49,4 +49,5 @@
 7. 6210612815 สิทธิโชค งามพิพัฒน์โชคชัย
 8. 6210612682 ปัณณวิชญ์ สังวร
 9. 6210612773 ปฐากร สุขแสง
-# [Pivotal](https://www.pivotaltracker.com/n/projects/2557028)
+
+# [Pivotal Tracker (Track the past/present/furure things we do)](https://www.pivotaltracker.com/n/projects/2557028)

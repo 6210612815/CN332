@@ -2,7 +2,7 @@
 
 # Core Features
 Account
-  •	Log in/out
+  •	Log in/out\
   •	Edit Profile 
 Students
   •	Add Idea of the Project

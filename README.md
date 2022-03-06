@@ -1,20 +1,20 @@
 # CN332 Project
 
 # Core Features
-Account\
+# Account
   •	Log in/out\
-  •	Edit Profile\\
-Students\
+  •	Edit Profile\
+# Students
   •	Add Idea of the Project\
   •	Do Project\
   •	Update Project\
   •	View All Project\
-  •	Search Other Project\\
-Teachers\
+  •	Search Other Project\
+# Teachers
   •	Approve Project\
   •	Reject Project\
   •	Comment/Rating Project\
-  •	Approve Complete Project\\
+  •	Approve Complete Project\
 
 # Screen Design#1
 ![This is an image](https://i.imgur.com/O452Dft.jpg)

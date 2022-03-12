@@ -1,8 +1,19 @@
-<!DOCTYPE html>
+{% extends "users/layout.html" %}
 <html>
 
-<p>Hello World</p>
+<title>MySite</title>
 
-<a href="{% url 'users:logout' %}">Log out</a>
+{% block body %}
+<body>
+    <h1> Home Page </h1>
+    <h2>Welcome, Name </h2>
+    
+
+    <a href="{% url 'users:logout' %}">Log out</a>
+</body>
+{% endblock %}
+
+
+
 
 </html>

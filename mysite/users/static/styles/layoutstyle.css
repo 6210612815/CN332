@@ -1,0 +1,27 @@
+.navbar {
+    overflow: hidden;
+    background-color: #314a82;
+    
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: right;
+    display: block;
+    color: #050505;
+    text-align: center;
+    padding: 50px 50px;
+    text-decoration: none;
+    background-color: beige;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  

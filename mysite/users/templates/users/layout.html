@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 {% load static %}
-<link rel="stylesheet" href="{% static 'styles/layoutstyle.css' %}"/>
-<div class="navbar" >
-    <img src="static\images\Emblem_of_Thammasat_University.svg" alt="logo" height="160 px" width="160 px">
-    <a href="{% url 'users:logout' %}">Log out</a>
-
-{% load static %}
-
 <html lang="en"> 
 <link rel="stylesheet" href="{% static 'styles/layout.css' %}"/>
+
+
+    
+<div class="navbar" style="margin-left: 0px;">
+    <img src="static\images\Emblem_of_Thammasat_University.svg" height="170 px" width="170 px">
+    <a href="{% url 'users:logout' %}">Log out</a>
+</div>
 <!-- Side navigation -->
 
-<div class="sidenav" >
+<div class="sidenav">
     <a href="{% url 'users:approval' %}" class="bullet">ขออนุมัติการทำโครงงาน</a><br>
     <a href="{% url 'users:status' %}" class="bullet">สถานะของโครงงาน</a><br>
     <a href="{% url 'users:update' %}" class="bullet">อัพเดทโครงงาน</a><br>
@@ -19,5 +19,7 @@
     <a href="{% url 'users:index' %}" class="bullet">กลับสู่หน้าหลัก</a>
 </div>
 
+<div style="margin-top: 170px;margin-left: 270px;">
 {% block body %}
 {% endblock %}
+</div>

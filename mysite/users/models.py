@@ -12,4 +12,5 @@ class UserProfile(models.Model):
     age = models.CharField(max_length=16)
     bio = models.CharField(max_length=200)
       
-    
+
+  

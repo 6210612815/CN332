@@ -4,13 +4,8 @@ from users.models import User
 
 class ProjectBefore (models.Model):
 
-    CATEGORY = [
-        ('Approve', 'Approve'),
-        ('Reject', 'Reject'),
-        ]
-
     ProID = models.AutoField(primary_key=True)
-    status = models.BooleanField(max_length=100 ,blank=True ,choices = CATEGORY)
+    status = models.CharField(max_length=100 ,default='Unapprove')
     projectname = models.CharField(max_length=150)
     projectmanager= models.CharField(max_length=150)
     article = models.CharField(max_length=1500)

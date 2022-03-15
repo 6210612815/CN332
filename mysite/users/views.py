@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from nntplib import ArticleInfo
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -6,6 +6,10 @@ from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from project.models import ProjectBefore, ProjectAfter, User
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
+
 # Create your views here.
 
 def login_request(request):
@@ -47,3 +51,5 @@ def submit(request):
 
 def update(request):
     return render(request, '../templates/users/projectupdate.html',)
+
+

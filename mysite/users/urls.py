@@ -15,4 +15,5 @@ urlpatterns = [
     path('submit', views.submit, name='submit'),
     path('update', views.update, name='update'),
     
+    
 ]

@@ -1,4 +1,18 @@
 <!DOCTYPE html>
 
+{% load static %}
+
+<html lang="en"> 
+<link rel="stylesheet" href="{% static 'styles/layout.css' %}"/>
+<!-- Side navigation -->
+
+<div class="sidenav" >
+    <a href="{% url 'users:approval' %}" class="bullet">ขออนุมัติการทำโครงงาน</a><br>
+    <a href="{% url 'users:status' %}" class="bullet">สถานะของโครงงาน</a><br>
+    <a href="{% url 'users:update' %}" class="bullet">อัพเดทโครงงาน</a><br>
+    <a href="{% url 'users:submit' %}" class="bullet">ส่งโครงงาน</a><br>
+    <a href="{% url 'users:index' %}" class="bullet">กลับสู่หน้าหลัก</a>
+</div>
+
 {% block body %}
 {% endblock %}

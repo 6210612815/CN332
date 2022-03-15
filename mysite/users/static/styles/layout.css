@@ -1,0 +1,78 @@
+/*sidebar*/
+.sidenav {
+    
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 270px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #cf2828; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-top: 170px;
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.bullet{
+    border: 2px solid #cad1d3;
+    background-color: #cad1d3;
+    
+    border-radius: 5px;
+   
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #314a82;
+    height: 170px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    margin-left: 0;
+    }
+
+    /* Links inside the navbar */
+.navbar a {
+    float: right;
+    display: block;
+    color: #050505;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    background-color: #c8d1d6;
+    border-radius: 5px;
+}
+
+    /* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+body{
+    margin: 0;
+}

@@ -24,14 +24,26 @@ def login_request(request):
                 messages.error(request,"Invalid username or password")
     return render(request, '../templates/users/login.html',
     context={'form':AuthenticationForm()})
-    
-    
+
+
 def index(request):
     if request.user.is_authenticated:
         return render(request, '../templates/users/index.html',)
     else:
         return redirect('/login')
-        
+
 def logout_view(request):
     logout(request)
     return redirect("/")
+
+def approval(request):
+    return render(request, '../templates/users/projectapproval.html',)
+
+def status(request):
+    return render(request, '../templates/users/projectstatus.html',)
+
+def submit(request):
+    return render(request, '../templates/users/projectsubmit.html',)
+
+def update(request):
+    return render(request, '../templates/users/projectupdate.html',)

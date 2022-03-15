@@ -7,9 +7,14 @@
 <body style="margin-top: 160px;">
     <h1>Home Page </h1>
     <h2>Welcome, Name </h2>
-    
 
-    <a href="{% url 'users:logout' %}">Log out</a>
+<ul>
+    <li><a href="{% url 'users:logout' %}">Log out</a></li>
+    <li><a href="{% url 'users:approval' %}">Project Approval</a></li>
+    <li><a href="{% url 'users:status' %}">Project Status</a></li>
+    <li><a href="{% url 'users:update' %}">Project Update</a></li>
+    <li><a href="{% url 'users:submit' %}">Submit a Project</a></li>
+</ul>
 </body>
 {% endblock %}
 

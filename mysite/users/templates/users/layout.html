@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/layoutstyle.css' %}"/>
+<div class="navbar" >
+    <img src="static\images\Emblem_of_Thammasat_University.svg" alt="logo" height="160 px" width="160 px">
+    <a href="{% url 'users:logout' %}">Log out</a>
 
-{% block body %}
+  </div>
+  
+
+{% block body %} 
 {% endblock %}

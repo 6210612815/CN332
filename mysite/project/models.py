@@ -14,7 +14,7 @@ class ProjectBefore (models.Model):
     projectname = models.CharField(max_length=150)
     projectmanager= models.CharField(max_length=150)
     article = models.CharField(max_length=1500)
-    AcID = models.ManyToManyField(User, blank=True, related_name="AcID")
+    PreStudentID = models.ManyToManyField(User, blank=True, related_name="PreStudentID")
 
 
 class ProjectAfter (models.Model):
@@ -29,7 +29,8 @@ class ProjectAfter (models.Model):
     projectname = models.CharField(max_length=150)
     projectmanager= models.CharField(max_length=150)
     article = models.CharField(max_length=1500)
-    AccID = models.ManyToManyField(User, blank=True, related_name="AccID")
+    StudentID = models.ManyToManyField(User, blank=True, related_name="StudentID")
+    TeacherID = models.ManyToManyField(User, blank=True, related_name="TeacherID")
 
 class Comment (models.Model):
 

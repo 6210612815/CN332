@@ -6,20 +6,21 @@
 
     
 <div class="navbar" style="margin-left: 0px;">
-    <img src="static\images\Emblem_of_Thammasat_University.svg" height="170 px" width="170 px">
+    <img src="static\images\Emblem_of_Thammasat_University.svg" height="170 px" width="170 px" style="padding-left:15px ;">
     <a href="{% url 'users:logout' %}">Log out</a>
 </div>
 <!-- Side navigation -->
 
 <div class="sidenav">
-    <a href="{% url 'users:approval' %}" class="bullet">ขออนุมัติการทำโครงงาน</a><br>
-    <a href="{% url 'users:status' %}" class="bullet">สถานะของโครงงาน</a><br>
-    <a href="{% url 'users:update' %}" class="bullet">อัพเดทโครงงาน</a><br>
-    <a href="{% url 'users:submit' %}" class="bullet">ส่งโครงงาน</a><br>
-    <a href="{% url 'users:index' %}" class="bullet">กลับสู่หน้าหลัก</a>
+    <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:approval' %}" >approve</a> </span></button>
+    <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:status' %}" >สถานะของโครงงาน</a> </span></button>
+    <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:update' %}" >อัพเดทโครงงาน</a> </span></button>
+    <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:submit' %}" >ส่งโครงงาน</a> </span></button>
+    <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:index' %}" >กลับสู่หน้าหลัก</a> </span></button>
 </div>
 
 <div style="margin-top: 170px;margin-left: 270px;">
 {% block body %}
+
 {% endblock %}
 </div>

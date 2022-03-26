@@ -5,6 +5,12 @@
 <body>
     <h1> Project Status </h1>
     <h2>Welcome, Name </h2>
+    {% for project in projectb %}
+                    <p>{{ project.projectname }}</p>
+                    <p>{{ project.projectmanager }}</p>
+                    <p>{{ project.article }}</p>
+                    <p>Status : {{ project.status }}</p>
+    {% endfor %}
 
     <a href="{% url 'users:index' %}" class="button">Return to Index</a>
 

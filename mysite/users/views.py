@@ -44,7 +44,10 @@ def approval(request):
     return render(request, '../templates/users/projectapproval.html',)
 
 def status(request):
-    return render(request, '../templates/users/projectstatus.html',)
+    user = User.objects.get(username = request.user.username)
+    return render(request, "users/projectstatus.html",{
+        "projectb": ProjectBefore.objects.filter(PreStudentID=user)
+    })
 
 def submit(request):
     return render(request, '../templates/users/projectsubmit.html',)

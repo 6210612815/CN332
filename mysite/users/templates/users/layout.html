@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en"> 
-<link rel="stylesheet" href="{% static 'styles/layout.css' %}"/>
-
+    <head>
+        <link rel="stylesheet" href="{% static 'styles/layout.css' %}"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    </head>
 
     
 <div class="navbar" style="margin-left: 0px;">
     <img src="static\images\Emblem_of_Thammasat_University.svg" height="170 px" width="170 px" style="padding-left:15px ;">
-    <a href="{% url 'users:logout' %}">Log out</a>
+    <a href="{% url 'users:logout' %}">Log out</a><p>Logged in as {{ request.user.username }}</p>
 </div>
 <!-- Side navigation -->
 
 <div class="sidenav">
-    <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:approval' %}" >approve</a> </span></button>
+    <button class="bullet" style="vertical-align:middle;"><span><a href="{% url 'users:approval' %}" >การอนุมัติโครงงาน</a> </span></button>
     <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:status' %}" >สถานะของโครงงาน</a> </span></button>
     <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:update' %}" >อัพเดทโครงงาน</a> </span></button>
     <button class="bullet" style="vertical-align:middle"><span><a href="{% url 'users:submit' %}" >ส่งโครงงาน</a> </span></button>

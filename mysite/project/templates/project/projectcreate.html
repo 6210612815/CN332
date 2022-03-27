@@ -1,19 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="{% static 'styles/layout.css' %}"/>
+        <style>
+            body{
+                background-color: #bbbbbb;
+                margin: 50px;
+            }
+            input{
+                width: 250px;
+                height: 30px;
+                border-radius: 15px;
+                border: 0;
+            }
+        </style>
+    </head>
     <body>
         <form action="{% url 'project:create_project' %}" method="post" novalidate>
             {% csrf_token %}
-            <h2>Project Name </h2>
-            <input  type="text" name="projectname" autocomplete="projectname" id="projectname">
+            <p>Project Name :</p>
+            <input type="text" name="projectname" autocomplete="projectname" id="projectname">
             <br>
-            <h2>Project Manager </h2>
-            <input  type="text" name="projectmanager" autocomplete="projectmanager" id="projectmanager">
+            <p>Project Manager :</p>
+            <input type="text" name="projectmanager" autocomplete="projectmanager" id="projectmanager">
             <br>
-            <h2>Article </h2>
-            <input  type="text" name="article" autocomplete="article" id="article">
+            <p>Article :</p>
+            <input type="text" name="article" autocomplete="article" id="article">
+            &nbsp;&nbsp;
+            <button type="submit" class="button"  style="width: 80px;background-color: #4cca4c;">Save &#128190;</button>
             <br>
             <br>
-            <button type="submit" >Save &#128190;</button>
+            <br>
+            <a href="{% url 'users:index' %} " class="button" >Return to Index</a>
         </form>
     </body>
 </html>

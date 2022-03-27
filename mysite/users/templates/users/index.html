@@ -6,11 +6,13 @@
 <title>MySite</title>
 
 {% block body %}
-<body>
-    <h1> Home Page </h1>
-    <h2>Welcome, Name </h2>
+<body style="background-color:#bbbbbb;">
+    <div style="margin:220px 50px">
+        <h1> Home Page </h1>
+        <h2>Welcome, Name </h2>
+    </div>
 </body>
-<a href="{% url 'project:create_project' %}" class="button">ขออนุมัติการทำโครงงาน</a><br>
+
 {% endblock %}
 
 

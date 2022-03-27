@@ -2,18 +2,20 @@
 <html>
 <title>Project</title>
 {% block body %}
-<body>
+<body style="background-color:#bbbbbb;">
+    <div style="margin:220px 50px">
     <h1> Project Status </h1>
-    <h2>Welcome, Name </h2>
+    <p>---------------------------------------------<br>
     {% for project in projectb %}
-                    <p>{{ project.projectname }}</p>
-                    <p>{{ project.projectmanager }}</p>
-                    <p>{{ project.article }}</p>
-                    <p>Status : {{ project.status }}</p>
+                    Projectname : {{ project.projectname }}<br>
+                    projectmanager : {{ project.projectmanager }}<br>
+                    Article :{{ project.article }}<br>
+                    Status : {{ project.status }}<br>
+                    ---------------------------------------------<br>
     {% endfor %}
-
+</p>
     <a href="{% url 'users:index' %}" class="button">Return to Index</a>
-
+</div>
 </body>
 {% endblock %}
 

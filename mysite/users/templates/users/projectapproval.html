@@ -2,6 +2,7 @@
 <html>
 <title>Project</title>
 {% block body %}
+<<<<<<< HEAD
 <body>
     <h1> Project Approval </h1>
     <h2>Welcome, Name </h2>
@@ -17,6 +18,14 @@
 
     <a href="{% url 'users:index' %} " class="button" >Return to Index</a>
 
+=======
+<body style="background-color:#bbbbbb;">
+    <div style="margin:220px 50px">
+        <h1> Project Approval </h1>
+        <a href="{% url 'project:create_project' %}" class="button" >ขออนุมัติการทำโครงงาน</a><br><br>
+        <a href="{% url 'users:index' %} " class="button" >Return to Index</a>
+    </div>
+>>>>>>> 42d1e18b2ece26dcaf46668969fe25b495363929
 </body>
 {% endblock %}
 

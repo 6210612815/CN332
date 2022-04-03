@@ -25,3 +25,4 @@ def PreProjectView(request):
     return render(request, "storepage/projectview.html",{
         "projectb": ProjectBefore.objects.filter(PreStudentID=user)
     })
+

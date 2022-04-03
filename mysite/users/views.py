@@ -41,7 +41,31 @@ def logout_view(request):
     return redirect("/")
 
 def approval(request):
-    return render(request, '../templates/users/projectapproval.html',)
+    return render(request, "users/projectapproval.html",{
+        "projectb": ProjectBefore.objects.all()
+    })
+
+def approved(request, ProID):
+    projectid = ProID
+    return render(request, "users/projectcheck.html",{
+        "project": ProjectBefore.objects.filter(ProID=projectid)
+    })
+
+def checkapprove(request, ProID):
+    user = User.objects.get(username = request.user.username)
+    projectid = ProID
+    bproject = ProjectBefore.objects.get(ProID = projectid)
+
+    aproject = ProjectAfter.objects.create(
+        projectname = bproject.projectname,
+        projectmanager = bproject.projectmanager,
+        article = bproject.article,
+        )
+    aproject.TeacherID.add(user)
+    return render(request, "users/projectcheck.html",{
+        "project": ProjectBefore.objects.filter(ProID=projectid)
+    })
+
 
 def status(request):
     user = User.objects.get(username = request.user.username)

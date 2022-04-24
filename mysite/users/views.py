@@ -70,6 +70,20 @@ def checkapprove(request, ProID):
         "project": ProjectBefore.objects.filter(ProID=projectid)
     })
 
+def checkcomment(request, ProID):
+    user = User.objects.get(username = request.user.username)
+    projectid = ProID
+    project = ProjectAfter.objects.get(ProID = projectid)
+
+    return render(request, "users/projectcommented.html",{
+        "project": ProjectAfter.objects.filter(ProID=projectid)
+    })
+
+def commented(request, ProID):
+    projectid = ProID
+    return render(request, "users/projectcommented.html",{
+        "project": ProjectBefore.objects.filter(ProID=projectid)
+    })
 
 def status(request):
     user = User.objects.get(username = request.user.username)
@@ -78,7 +92,9 @@ def status(request):
     })
 
 def submit(request):
-    return render(request, '../templates/users/projectsubmit.html',)
+    return render(request, "users/projectsubmit.html",{
+        "project": ProjectAfter.objects.all()
+    })
 
 def update(request):
     return render(request, '../templates/users/projectupdate.html',)

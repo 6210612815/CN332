@@ -5,6 +5,15 @@
 <body style="background-color:#bbbbbb;">
     <div style="margin:220px 50px">
         <h1> Project Submit </h1>
+        {% for project in project %}
+                    <p>{{ project.ProID }}</p>
+                    <p>{{ project.projectname }}</p>
+                    <p>{{ project.projectmanager }}</p>
+                    <p>{{ project.article }}</p>
+                    <p>Status : {{ project.status }}</p>
+
+                    <p><a name="projectid" href="{% url 'users:commented' project.ProID %}"class= "btn btn-outline-danger">Check</a></p>
+        {% endfor %}
 
         <a href="{% url 'users:index' %}" class="button">Return to Index</a>
     </div>

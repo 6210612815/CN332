@@ -1,0 +1,27 @@
+{% extends "users/layout.html" %}
+<html>
+<title>Project</title>
+{% block body %}
+<body>
+    <h1> Project Approval </h1>
+    <h2>Welcome, Name </h2>
+    {% for project in project %}
+                    <p><a href="{% url 'users:checkcomment' project.ProID %}"class= "btn btn-outline-danger">Complete(***WIP***)</a></p>
+
+                    <p>{{ project.projectname }}</p>
+                    <p>{{ project.projectmanager }}</p>
+                    <p>{{ project.article }}</p>
+                    <p>Status : {{ project.status }}</p>
+    {% endfor %}
+
+    <br>
+    <br>
+
+
+
+    <a href="{% url 'users:index' %} " class="button" >Return to Index</a>
+
+</body>
+{% endblock %}
+
+</html>

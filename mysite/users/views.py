@@ -61,6 +61,10 @@ def checkapprove(request, ProID):
         projectmanager = bproject.projectmanager,
         article = bproject.article,
         )
+
+    for owner in ProjectBefore.objects.get(pk=ProID, ProID = projectid).PreStudentID.all():
+            aproject.StudentID.add(owner)
+
     aproject.TeacherID.add(user)
     return render(request, "users/projectcheck.html",{
         "project": ProjectBefore.objects.filter(ProID=projectid)

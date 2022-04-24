@@ -82,7 +82,7 @@ def checkcomment(request, ProID):
 def commented(request, ProID):
     projectid = ProID
     return render(request, "users/projectcommented.html",{
-        "project": ProjectBefore.objects.filter(ProID=projectid)
+        "project": ProjectAfter.objects.filter(ProID=projectid)
     })
 
 def status(request):

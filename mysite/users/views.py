@@ -66,6 +66,7 @@ def checkapprove(request, ProID):
             aproject.StudentID.add(owner)
 
     aproject.TeacherID.add(user)
+    bproject.delete()
     return render(request, "users/projectcheck.html",{
         "project": ProjectBefore.objects.filter(ProID=projectid)
     })
@@ -88,7 +89,7 @@ def commented(request, ProID):
 def status(request):
     user = User.objects.get(username = request.user.username)
     return render(request, "users/projectstatus.html",{
-        "projectb": ProjectBefore.objects.filter(PreStudentID=user)
+        "projectb": ProjectAfter.objects.filter(projectmanager=user)
     })
 
 def submit(request):

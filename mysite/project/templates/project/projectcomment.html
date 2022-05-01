@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'styles/layout.css' %}"/>
+        <style>
+            body{
+                background-color: #bbbbbb;
+                margin: 50px;
+            }
+            input{
+                width: 250px;
+                height: 30px;
+                border-radius: 15px;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <body>  
+            <form action="{% url 'project:comment_project' %}" method="post" novalidate>
+                    {% csrf_token %} 
+                    Comment:
+                    <input type="text" name="comment_text" autocomplete="comment_text" id="comment_text">
+                    <br>
+                    <br>
+                    <br>
+                    Rating:
+                    <input type="text" name="rating" autocomplete="rating" id="rating">
+                    <br><br>
+                    <button type="submit" class="button"  style="width: 80px;background-color: #4cca4c;">Save &#128190;</button>
+            </form>  
+            <br>
+            
+            <br>
+            <a href="{% url 'users:index' %} " class="button" >Return to Index</a>
+            </body>  
+    </body>
+</html>

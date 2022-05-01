@@ -1,28 +1,58 @@
 {% extends "users/layout.html" %}
+
+{% load static %}
 <html>
+    <style>
+        body{
+            background-color: #bbbbbb;
+            margin: 50px;
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            border-radius: 15px;
+            border: 0;
+        }
+        hr.new2 {
+            border-top: 1px dashed red;
+        }  
+            
+    </style>
+    <head>
+        <link rel="stylesheet" href="{% static 'styles/layout.css' %}"/>
+    </head>
+
 <title>Project</title>
+
 {% block body %}
+
 <body style="background-color:#bbbbbb;">
     <div style="margin:220px 50px">
         <h1> Project Approval </h1>
         <a href="{% url 'project:create_project' %}" class="button" >ขออนุมัติการทำโครงงาน</a><br><br>
-        <a href="{% url 'users:index' %} " class="button" >Return to Index</a>
-    </div>
-<body>
-    <h1> Project Approval </h1>
-    <h2>Welcome, Name </h2>
+        <hr class="new2">
+        <h1>All Project List</h1>
     {% for project in projectb %}
-                    <p>{{ project.ProID }}</p>
-                    <p>{{ project.projectname }}</p>
-                    <p>{{ project.projectmanager }}</p>
-                    <p>{{ project.article }}</p>
+    <article class="episode">
+        <div class="episode__number">{{ project.ProID }}</div>
+        <div class="episode__content">
+            <div class="title">Project ID {{ project.ProID }}</div>
+                <div class="story">
+                    <p>Project Name :{{ project.projectname }}</p>
+                    <p>Project Manager :{{ project.projectmanager }}</p>
+                    <p>Project Article :{{ project.article }}</p>
                     <p>Status : {{ project.status }}</p>
-
-                    <p><a name="projectid" href="{% url 'users:approved' project.ProID %}"class= "btn btn-outline-danger">Check</a></p>
+                    <p><a name="projectid" href="{% url 'users:approved' project.ProID %}" class="button">Check</a></p>
+                    <br>
+                </div>
+            </div>
+    </article>
     {% endfor %}
-
-    <a href="{% url 'users:index' %} " class="button" >Return to Index</a>
-
+    <a href="{% url 'users:index' %}" class="button">กลับสู่หน้าหลัก</a>
+    <br>
+    <br>
+    <hr class="new2">
+    </div>
 </body>
 {% endblock %}
 

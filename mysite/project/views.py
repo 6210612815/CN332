@@ -1,10 +1,14 @@
+from audioop import reverse
+from xml.etree.ElementTree import Comment
 from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib.auth import login, logout, authenticate
-from .models import ProjectBefore, ProjectAfter, User
+from .models import ProjectBefore, ProjectAfter, User , Comment
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
 from django.contrib import messages
+from django.urls import reverse
+
 # Create your views here.
 
 class ProjectCreateView(CreateView):
@@ -25,3 +29,12 @@ def PreProjectView(request):
     return render(request, "storepage/projectview.html",{
         "projectb": ProjectBefore.objects.filter(PreStudentID=user)
     })
+
+def CommentCreateView(request):
+    if request.method == "POST":
+        text = request.POST["comment_text"]
+        rating = request.POST["rating"]
+        store_comment = Comment(comment_text=text,rating=rating)
+        store_comment.save()
+        return HttpResponseRedirect(reverse("users:update"))
+    return render(request, "../templates/project/projectcomment.html")

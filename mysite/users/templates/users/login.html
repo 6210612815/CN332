@@ -16,27 +16,27 @@
 <div class="container"> 
 <div class="login-box" >
 	
-    
+    <img src="..\static\images\Logo_ECE.png" height="80 px" width="380 px"  >
         <form action="{% url 'users:login' %}" method = "POST" class="form-group">
         
             {%csrf_token%}
+            <h3 style="margin-left:45px;margin-bottom:0px;margin-top:0px ">ยินดีต้อนรับ</h3>
+            <h3 style="margin-top:0px;margin-bottom:0px" >นักศึกษา และ บุคลากร</h3>
     <div class="user-box">        
-            <input type="text" style="width:320px; " id="form.username" placeholder="Username" name="username">
+            <input type="text"  style="color: black " id="form.username" placeholder="เลขทะเบียนนักศึกษา/รหัสผู้ใช้งาน" name="username">
     </div>        
         
     <div class="user-box">
-            <input type="password" style="width:320px;" id="form.password" placeholder="Password" name="password"><br>
+            <input type="password" style="color: black "  id="form.password" placeholder="รหัสผ่าน" name="password"><br>
     </div>
-
+    
+    <div class="submit">
     <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <input type="submit" style="width:90px; color: rgb(255, 255, 255);"  value="SIGN IN">
+        
+        <input type="submit"  color: rgb(255, 255, 255);  value="ลงชื่อเข้าใช้">
     </a>
           </form>
-	
+	</div>
 
 </div>
 </div>

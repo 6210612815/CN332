@@ -41,7 +41,49 @@ def logout_view(request):
     return redirect("/")
 
 def approval(request):
-    return render(request, '../templates/users/projectapproval.html',)
+    return render(request, "users/projectapproval.html",{
+        "projectb": ProjectBefore.objects.all()
+    })
+
+def approved(request, ProID):
+    projectid = ProID
+    return render(request, "users/projectcheck.html",{
+        "project": ProjectBefore.objects.filter(ProID=projectid)
+    })
+
+def checkapprove(request, ProID):
+    user = User.objects.get(username = request.user.username)
+    projectid = ProID
+    bproject = ProjectBefore.objects.get(ProID = projectid)
+
+    aproject = ProjectAfter.objects.create(
+        projectname = bproject.projectname,
+        projectmanager = bproject.projectmanager,
+        article = bproject.article,
+        )
+
+    for owner in ProjectBefore.objects.get(pk=ProID, ProID = projectid).PreStudentID.all():
+            aproject.StudentID.add(owner)
+
+    aproject.TeacherID.add(user)
+    return render(request, "users/projectcheck.html",{
+        "project": ProjectBefore.objects.filter(ProID=projectid)
+    })
+
+def checkcomment(request, ProID):
+    user = User.objects.get(username = request.user.username)
+    projectid = ProID
+    project = ProjectAfter.objects.get(ProID = projectid)
+
+    return render(request, "users/projectcommented.html",{
+        "project": ProjectAfter.objects.filter(ProID=projectid)
+    })
+
+def commented(request, ProID):
+    projectid = ProID
+    return render(request, "users/projectcommented.html",{
+        "project": ProjectAfter.objects.filter(ProID=projectid)
+    })
 
 def status(request):
     user = User.objects.get(username = request.user.username)
@@ -50,7 +92,9 @@ def status(request):
     })
 
 def submit(request):
-    return render(request, '../templates/users/projectsubmit.html',)
+    return render(request, "users/projectsubmit.html",{
+        "project": ProjectAfter.objects.all()
+    })
 
 def update(request):
     return render(request, '../templates/users/projectupdate.html',{"comment": Comment.objects.all()})

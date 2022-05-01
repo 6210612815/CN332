@@ -11,9 +11,13 @@ urlpatterns = [
     path('login', views.login_request, name='login'),
     path('logout', views.logout_view, name='logout'),
     path('approval', views.approval, name='approval'),
+    path('approved/<int:ProID>', views.approved, name='approved'),
+    path('commented/<int:ProID>', views.commented, name='commented'),
+    path('checkcomment/<int:ProID>', views.checkcomment, name='checkcomment'),
+    path('checkapprove/<int:ProID>', views.checkapprove, name='checkapprove'),
     path('status', views.status, name='status'),
     path('submit', views.submit, name='submit'),
     path('update', views.update, name='update'),
-    
-    
+
+
 ]

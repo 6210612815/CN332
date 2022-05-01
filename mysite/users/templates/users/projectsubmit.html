@@ -1,12 +1,40 @@
 {% extends "users/layout.html" %}
 <html>
+    <style>
+       
+        hr.new2 {
+            border-top: 1px dashed red;
+        }  
+            
+    </style>
 <title>Project</title>
 {% block body %}
 <body style="background-color:#bbbbbb;">
     <div style="margin:220px 50px">
         <h1> Project Submit </h1>
+        {% for project in project %}
+        <article class="episode">
+            <div class="episode__number">{{ project.ProID }}</div>
+            <div class="episode__content">
+                <div class="title">Project ID {{ project.ProID }}</div>
+                    <div class="story">
+                    <p>Project Name :{{ project.projectname }}</p>
+                    <p>Project Manager :{{ project.projectmanager }}</p>
+                    <p>Project Manager :{{ project.article }}</p>
+                    <p>Status : {{ project.status }}</p>
+                    <p><a name="projectid" href="{% url 'users:commented' project.ProID %}"class= "button">Check</a></p>
+                    <br>
+                </div>
+            </div>
+        </article>
+                    
+        {% endfor %}
 
-        <a href="{% url 'users:index' %}" class="button">Return to Index</a>
+        <a href="{% url 'users:index' %}" class="button">กลับสู่หน้าหลัก</a>
+        <br>
+        <br>
+        <hr class="new2">
+        
     </div>
 </body>
 {% endblock %}

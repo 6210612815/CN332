@@ -1,0 +1,32 @@
+{% extends "users/layout.html" %}
+<html>
+    <style>
+        hr.new2 {
+            border-top: 1px dashed red;
+        }          
+    </style>
+<title>Project</title>
+{% block body %}
+<body style="background-color:#bbbbbb;">
+    <div style="margin:220px 50px">
+    <h1> Project Approval </h1>
+    {% for project in project %}
+                    
+
+                    <p>Project ID :{{ project.projectname }}</p>
+                    <p>Project Name :{{ project.projectmanager }}</p>
+                    <p>Project Manager :{{ project.article }}</p>
+                    <p>Status : {{ project.status }}</p>
+               
+                    <p><a href="{% url 'users:checkapprove' project.ProID %}" class="button">Approve</a></p>
+                   
+    {% endfor %}
+    <br>
+    <a href="{% url 'users:index' %}" class="button">กลับสู่หน้าหลัก</a>
+    <br>
+    <br>
+    <hr class="new2">
+</body>
+{% endblock %}
+
+</html>

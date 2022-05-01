@@ -20,7 +20,7 @@ class ProjectAfter (models.Model):
         ]
 
     ProID = models.AutoField(primary_key=True)
-    status = models.BooleanField(max_length=100 ,blank=True ,choices = CATEGORY)
+    status = models.CharField(max_length=100 ,default='OnGoing')
     projectname = models.CharField(max_length=150)
     projectmanager= models.CharField(max_length=150)
     article = models.CharField(max_length=1500)

@@ -5,7 +5,14 @@
 <body style="background-color:#bbbbbb;">
     <div style="margin:220px 50px">
         <h1> Project Updates </h1>
-
+            <h1>comment</h1>
+            {% for i in comment %}
+                    Project Commented : {{ i.projectcommented }}<br>
+                    Comment : {{ i.comment_text }}<br>
+                    rating :{{ i.rating }}<br>
+                    ---------------------------------------------<br>
+            {% endfor %}
+            <a href="{% url 'project:comment_project' %}" class="button" >Click here to put comment</a><br><br>
         <a href="{% url 'users:index' %}" class="button">Return to Index</a>
     </div>
 </body>

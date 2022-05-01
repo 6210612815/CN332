@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
-from project.models import ProjectBefore, ProjectAfter, User
+from project.models import ProjectBefore, ProjectAfter, User , Comment
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
 
@@ -97,6 +97,6 @@ def submit(request):
     })
 
 def update(request):
-    return render(request, '../templates/users/projectupdate.html',)
+    return render(request, '../templates/users/projectupdate.html',{"comment": Comment.objects.all()})
 
 
